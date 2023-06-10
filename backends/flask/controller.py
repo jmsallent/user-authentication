@@ -12,10 +12,6 @@ def registerUser(name, email, password):
 
 def loginUser(email, password):
     try:
-        print("--------------------------------------------")
-        print("--------------------------------------------")
-        print("--------------------------------------------")
-        print(db.User)
         # products.objects(Name='TV'):
         pass
         

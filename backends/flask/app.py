@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from controller import registerUser , loginUser
 app = Flask(__name__)
 
 
@@ -9,29 +10,22 @@ def index():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        # name = request.form['name']
-        print(request.form)
-        # email = request.form['email']
-        # password = request.form['password']
-        # print(name)
-        # print(email)
-        # print(email)
+        name = request.form['name']
+        email = request.form['email']
+        password = request.form['password']
+        registerUser(name, email, password);
         pass
-        return render_template('register.html')
+        return render_template('succes_registration.html')
     if request.method == 'GET':
         pass
         return render_template('register.html')
     
     
-    
 
-@app.route('/testForm', methods=['GET', 'POST'])
-def func_name():
-    print(request.form['fname'])
-    return render_template('testForm.html')
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
+        return render_template('succes_registration.html')
         pass
     if request.method == 'GET':
         return render_template('login.html')
@@ -39,5 +33,5 @@ def login():
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000, debug=True)
+    app.run(host='127.0.0.1', port=3000, debug=True)
  
