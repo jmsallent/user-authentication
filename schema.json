@@ -1,7 +1,0 @@
-{
-  "_id": "5s9f64gh3df90sdf74c6ab8",
-  "username": "example_user",
-  "password": "hashed_password",
-  "email": "user@example.com",        
-  "created_at": "2023-06-10T12:00:00Z"
-}

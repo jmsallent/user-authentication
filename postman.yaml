@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: Ejemplo de API
+  description: Documentación de la API de ejemplo
+  version: 1.0.0
+
+paths:
+  /:
+    get:
+      summary: Obtener información de inicio
+      responses:
+        '200':
+          description: Respuesta exitosa
+
+  /register:
+    get:
+      summary: Obtener formulario de registro
+      responses:
+        '200':
+          description: Respuesta exitosa
+
+    post:
+      summary: Registrar un nuevo usuario
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+
+      responses:
+        '200':
+          description: Usuario registrado exitosamente
+
+  /login:
+    get:
+      summary: Obtener formulario de inicio de sesión
+      responses:
+        '200':
+          description: Respuesta exitosa
+
+    post:
+      summary: Iniciar sesión
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+
+      responses:
+        '200':
+          description: Sesión iniciada exitosamente
